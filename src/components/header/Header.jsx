@@ -8,29 +8,33 @@ import { FaUser } from "react-icons/fa";
 export const Header = ({ backLink = "" }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+
   const { isAuth } = useAuth();
 
   return (
     <header className={styles.header}>
-      {pathname !== "/" ? (
-        <button
-          onClick={() => {
-            navigate(backLink);
-          }}
-        >
-          <IoMdArrowBack color="white" fontSize={29} />
-        </button>
-      ) : (
-        <button
-          onClick={() => {
-            navigate("/profile");
-          }}
-        >
-          <FaUser color="white" fontSize={27} />
-        </button>
+      {isAuth && (
+        <>
+          {pathname === "/" && isAuth ? (
+            <button
+              onClick={() => {
+                navigate(backLink);
+              }}
+            >
+              <IoMdArrowBack color="white" fontSize={29} />
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                navigate("/profile");
+              }}
+            >
+              <FaUser color="white" fontSize={27} />
+            </button>
+          )}
+          <Hamburger />
+        </>
       )}
-
-      <Hamburger />
     </header>
   );
 };

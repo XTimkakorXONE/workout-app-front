@@ -1,13 +1,19 @@
-import Auth from "../pages/Auth";
-import Home from "../pages/Home";
+import Auth from "../pages/auth/Auth";
+import Home from "../pages/home/Home";
 import NewWorkout from "../pages/NewWorkout";
 import Profile from "../pages/Profile";
 
 export const routes = [
   {
+    path: "/auth",
+    component: Auth,
+    isAuth: false,
+  },
+
+  {
     path: "/",
     component: Home,
-    isAuth: false,
+    isAuth: true,
   },
   {
     path: "/auth",
@@ -17,7 +23,7 @@ export const routes = [
   {
     path: "/profile",
     component: Profile,
-    isAuth: false,
+    isAuth: true,
   },
   {
     path: "/new-workout",
