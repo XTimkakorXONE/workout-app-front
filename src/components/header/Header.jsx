@@ -18,18 +18,18 @@ export const Header = ({ backLink = "" }) => {
           {pathname === "/" && isAuth ? (
             <button
               onClick={() => {
-                navigate(backLink);
-              }}
-            >
-              <IoMdArrowBack color="white" fontSize={29} />
-            </button>
-          ) : (
-            <button
-              onClick={() => {
                 navigate("/profile");
               }}
             >
               <FaUser color="white" fontSize={27} />
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                navigate(backLink);
+              }}
+            >
+              <IoMdArrowBack color="white" fontSize={29} />
             </button>
           )}
           <Hamburger />

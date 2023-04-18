@@ -1,8 +1,8 @@
 import Auth from "../pages/auth/Auth";
 import Home from "../pages/home/Home";
-import NewWorkout from "../pages/NewWorkout";
-import Profile from "../pages/Profile";
-
+import NewWorkout from "../pages/new-workout/NewWorkout";
+import Profile from "../pages/profile/Profile";
+import NewExercise from "../pages/new-exercise/NewExercise";
 export const routes = [
   {
     path: "/auth",
@@ -30,11 +30,11 @@ export const routes = [
     component: NewWorkout,
     isAuth: true,
   },
-  //   {
-  //     path: "/new-exercise",
-  //     component: NewExercise,
-  //     isAuth: true,
-  //   },
+  {
+    path: "/new-exercise",
+    component: NewExercise,
+    isAuth: true,
+  },
 
   //   {
   //     path: "/workout/:id",

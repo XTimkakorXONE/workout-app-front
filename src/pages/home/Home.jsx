@@ -5,6 +5,7 @@ import Button from "../../ui/button/Button";
 import styles from "./Home.module.scss";
 import { useAuth } from "../../hooks/useAuth";
 import Cookies from "js-cookie";
+import { Statistics } from "../../components/statistics/statistics";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Home = () => {
     <Layout bgImage="src/assets/workout_main.jpg">
       <Button clickHandler={() => navigate("/new-workout")}>New</Button>
       <h1 className={styles.heading}>Exercise for the best</h1>
+      <Statistics />
     </Layout>
   );
 };
