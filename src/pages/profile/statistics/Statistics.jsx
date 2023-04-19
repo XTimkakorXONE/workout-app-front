@@ -1,4 +1,4 @@
-import { useProfile } from "../../pages/profile/useProfile";
+import { useProfile } from "../useProfile";
 import styles from "./statistics.module.scss";
 
 export const Statistics = () => {

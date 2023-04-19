@@ -42,7 +42,7 @@ const NewExercise = () => {
   return (
     <>
       <Layout
-        bgImage="src/assets/new_exercise.jpg"
+        bgImage="images/new_exercise.jpg"
         heading="Create new exercise"
         backLink="/"
       />

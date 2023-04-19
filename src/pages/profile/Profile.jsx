@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Header } from "../../components/header/Header";
 import { useProfile } from "./useProfile";
 import Loader from "../../ui/Loader";
-import { Statistics } from "../../components/statistics/statistics";
+import { Statistics } from "./statistics/Statistics";
 
 const Profile = () => {
   const { data, isLoading } = useProfile();
@@ -15,7 +15,7 @@ const Profile = () => {
       <div
         className={clsx(stylesLayout.wrapper, stylesLayout.otherPage)}
         style={{
-          backgroundImage: `url('src/assets/image_profile.jpg')`,
+          backgroundImage: `url('images/image_profile.jpg')`,
           height: 366,
         }}
       >
@@ -46,7 +46,7 @@ const Profile = () => {
                 {index === 1 ? "After" : "Before"}
               </div>
               <img
-                src={image}
+                src={index === 1 ? "After" : "Before"}
                 alt=""
                 draggable={false}
                 style={{ borderRadius: 14 }}
